@@ -1,0 +1,103 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .move {
+    position: absolute;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right,rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://wallpapercave.com/wp/wp2757874.gif");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+ h1 {
+    text-align: center;
+    margin-top: 100px;
+    font-family: 'Yusei Magic', sans-serif;
+  } 
+
+  p {
+    font-family: 'Yusei Magic', sans-serif;
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(0, 236, 253), rgba(3, 219, 75, 0.623)); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    margin: auto;
+    width: 50%
+  }
+
+  ::-webkit-scrollbar{
+    width: 12px;
+    background:#222234;
+  }
+  
+  
+     ::-webkit-scrollbar-thumb {
+      background:linear-gradient(transparent, #0104c0, #222234);
+      border-radius: 3px;
+    } 
+  
+    ::-webkit-scrollbar-thumb:hover {
+      background:linear-gradient(transparent, #c06701, #222234);
+    }
+
+.aboutWavy span {
+    position: relative;
+    display: inline-block; 
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i))
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+    40%, 100% {
+        transform: translateY(0px);
+    }
+}
+
+#navbar {
+    background-color: #222234;
+    overflow: hidden; 
+    position: absolute;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    top: 0px;
+    left: 0px;
+  }
+  
+  #navbar a {
+    float: right;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 25px; 
+    text-decoration: none;
+    font-size: 17px;
+    transition-duration: 1s;
+    
+  }
+  
+  #navbar a:hover {
+    background-color: rgba(45, 45, 45, 0.75);
+    transition-duration: 1s;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 128, 75);
+    letter-spacing: 1px;
+  }

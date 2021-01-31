@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin's Speech Assistant</title>
+    <link href="./style.css" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/gif/png" href="https://photos.smugmug.com/photos/i-pXsPfsF/0/ce754126/S/i-pXsPfsF-S.png">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <h1 data-text="Kevin's Speech Assistant">Kevin's Speech Assistant</h1>
+    <p><b>Kevin's Speech Assistant is an AI type personal assistant that communicates with you by voice.</b></p> 
+
+        <span>Here's how to use it</span>
+        <h4>1. Click on the button "Message"</h4>
+        <h4>2. Say what you want it to do. For Example: "Efron open Spotify".</h4>
+        <h4>3. Enjoy! The Assistant will follow your command.</h4>
+    <button class="talk">Message</button>
+    <h3 class="content"></h3>
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+    <script>
+        // The Assistant Is Activated
+        const btn = document.querySelector('.talk');
+        const content = document.querySelector('.content');
+
+     
+        const YouTube = [
+            'Opening YouTube'
+     ];
+     const Github = ['Opening GitHub'];
+
+     const Spotify = ["Opening Spotify"];
+
+     const FavSong = ["Playing Kevin's Favorite Song"];
+
+     const Instagram = ["Opening Instagram"];
+
+     const Reddit = ["Opening Reddit"];
+
+     const Netflix = ["Opening Netflix"];
+
+     const Codecademy = ["Opening Codecademy"];
+
+     const FreeCodeCamp = ["Opening FreeCodeCamp"]
+
+     const Gmail = ['Opening Gmail'];
+
+     const Amazon = ['Opening Amazon'];
+
+     const Duolingo = ['Opening Duolingo'];
+
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const recognition =  new SpeechRecognition();
+
+        recognition.onstart = function(){
+            console.log('How Can I Help You?')
+        }
+        recognition.onresult = function (event) {
+            const current = event.resultIndex;
+
+            const transcript = event.results[current][0].transcript;
+            content.textContent = transcript;
+            readOutLoud(transcript);
+
+        };
+
+        btn.addEventListener('click', () =>{
+            recognition.start();
+        });
+
+
+        function readOutLoud(message){
+            const speech = new SpeechSynthesisUtterance();
+
+            speech.text = 'Sorry, I cannot do that';
+
+
+            if(message.includes('Afrin open YouTube')){
+                const finalText = 
+                    YouTube[Math.floor(Math.random()*YouTube.length)];
+                speech.text = finalText; 
+                window.open('https://www.youtube.com/')
+                }
+
+                else if(message.includes('Afrin open GitHub')){
+                const finalText = 
+                    Github[Math.floor(Math.random()*YouTube.length)];
+                speech.text = finalText; 
+                window.open('https://github.com/')
+                }
+
+                else if(message.includes('Afrin open Spotify')){
+                const finalText = 
+                    Spotify[Math.floor(Math.random()*YouTube.length)];
+                speech.text = finalText; 
+                window.open('https://www.spotify.com/us/')
+                }
+
+                else if(message.includes("Afrin play Kevin's favourite song")){
+                const finalText = 
+                    FavSong[Math.floor(Math.random()*YouTube.length)];
+                speech.text = finalText; 
+                window.open('https://www.youtube.com/watch?v=Q-T7Mp-OPWw')
+                }
+
+                else if(message.includes('Afrin open Instagram')){
+                const finalText = 
+                    Instagram[Math.floor(Math.random()*YouTube.length)];
+                speech.text = finalText; 
+                window.open('https://www.instagram.com/')
+                }
+
+                else if(message.includes('Afrin open Reddit')){
+                const finalText = 
+                    Reddit[Math.floor(Math.random()*YouTube.length)];
+                speech.text = finalText; 
+                window.open('https://www.reddit.com/')
+                }
+
+                else if(message.includes('Afrin open Netflix')){
+                const finalText = 
+                    Netflix[Math.floor(Math.random()*YouTube.length)];
+                speech.text = finalText; 
+                window.open('https://www.netflix.com/')
+                }
+
+                else if(message.includes('Afrin open code academy')){
+                const finalText = 
+                    Codecademy[Math.floor(Math.random()*YouTube.length)];
+                speech.text = finalText; 
+                window.open('https://www.codecademy.com/')
+                }
+
+                else if(message.includes('Afrin open freecodecamp')){
+                const finalText = 
+                    FreeCodeCamp[Math.floor(Math.random()*YouTube.length)];
+                speech.text = finalText; 
+                window.open('https://www.freecodecamp.org/')
+                }
+
+                else if(message.includes('Afrin open Gmail')){
+                const finalText = 
+                    Gmail[Math.floor(Math.random()*YouTube.length)];
+                speech.text = finalText; 
+                window.open('https://gmail.com/')
+                }
+
+                else if(message.includes('Afrin open Amazon')){
+                const finalText = 
+                    Amazon[Math.floor(Math.random()*YouTube.length)];
+                speech.text = finalText; 
+                window.open('https://www.amazon.com/')
+                }
+
+                else if(message.includes('Afrin open Duolingo')){
+                const finalText = 
+                    Duolingo[Math.floor(Math.random()*YouTube.length)];
+                speech.text = finalText; 
+                window.open('https://www.duolingo.com/')
+                }
+
+            speech.volume = 1;
+            speech.rate = 1;
+            speech.pitch = -10;
+
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+    <script type="text/javascript">
+        const deg = 6;
+        const hr = document.querySelector('#hr');
+        const mn = document.querySelector('#mn');
+        const sc = document.querySelector('#sc');
+    
+    
+        setInterval(() => {
+            let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
+    
+        hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+        })
+    </script>
+</body>
+</html>

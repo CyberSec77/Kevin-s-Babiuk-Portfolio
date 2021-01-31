@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right,rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://wallpapercave.com/wp/wp2757874.gif");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navbar {
+    background-color: #222234;
+    overflow: hidden; 
+    position: absolute;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    top: 0px;
+    left: 0px;
+  }
+  
+  #navbar a {
+    float: right;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 25px; 
+    text-decoration: none;
+    font-size: 17px;
+    transition-duration: 1s;
+    
+  }
+  
+  #navbar a:hover {
+    background-color: rgba(45, 45, 45, 0.75);
+    transition-duration: 1s;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 128, 75);
+    letter-spacing: 1px;
+  }
+  
+  .move {
+    position: absolute;
+  }
+
+.all {
+margin: 0;
+padding: 0; 
+min-height: 100vh;
+padding: 50px 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column; 
+font-family: 'Londrina Solid', cursive;
+  } 
+
+.all .content{
+  max-width: 800px;
+  text-align: center;
+}
+
+.all .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.all .content p {
+  font-weight: 300;
+  color: #fff;
+  font-size: 26px;
+}
+
+ .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+} 
+
+.container .contactInfo .box .text h3 {
+  font-weight: 500;
+  color: #00bcd4;
+}
+
+ .contactForm {
+  width: 35%;
+  padding: 40px; 
+  background: #fff;
+  border-radius: 20px;
+  display:block;
+  margin:auto;
+}
+
+.contactForm h2 {
+  font-size: 36px;
+  color: #333;
+  font-weight: 500;
+  font-style: italic;
+}
+
+ .contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+ .contactForm .inputBox input, .contactForm .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0; 
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span, .contactForm .inputBox input:valid ~ span,.contactForm .inputBox textarea:focus ~ span, .contactForm .inputBox textarea:valid ~ span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+  width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Londrina Solid', cursive; 
+  transition-duration: 1s;
+} 
+
+.contactForm .inputBox input[type="submit"]:hover {
+  background-color: rgba(2, 177, 69, 0.75);
+  transition-duration: 1s;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+::-webkit-scrollbar{
+  width: 12px;
+  background:#222234;
+} 
+
+
+   ::-webkit-scrollbar-thumb {
+    background:linear-gradient(transparent, #0104c0, #222234);
+    border-radius: 3px;
+  } 
+
+  ::-webkit-scrollbar-thumb:hover {
+    background:linear-gradient(transparent, #c06701, #222234);
+  }
+

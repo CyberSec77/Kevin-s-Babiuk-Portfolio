@@ -1,0 +1,500 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right,rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://wallpapercave.com/wp/wp2757874.gif");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+  }
+
+  ::-webkit-scrollbar{
+    width: 12px;
+    background:#222234;
+  } 
+  
+  
+     ::-webkit-scrollbar-thumb {
+      background:linear-gradient(transparent, #0104c0, #222234);
+      border-radius: 3px;
+    } 
+  
+    ::-webkit-scrollbar-thumb:hover {
+      background:linear-gradient(transparent, #c06701, #222234);
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #navbar {
+        background-color: #222234;
+        overflow: hidden; 
+        position: absolute;
+        width: 100%;
+        font-family: 'Quicksand', sans-serif;
+        top: 0px;
+        left: 0px;
+      }
+      
+      #navbar a {
+        float: right;
+        color: #ffffff;
+        text-align: center;
+        padding: 25px 25px; 
+        text-decoration: none;
+        font-size: 17px;
+        transition-duration: 1s;
+        
+      }
+      
+      #navbar a:hover {
+        background-color: rgba(45, 45, 45, 0.75);
+        transition-duration: 1s;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(255, 128, 75);
+        letter-spacing: 1px;
+      }
+      
+      .move {
+        position: absolute;
+      }
+
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: 'Oswald', sans-serif;
+      }
+
+    .container .card {
+      position: relative; 
+      width: 320px;
+      height: 450px;
+      background: #232323;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .container .card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #28c7dc;
+      clip-path: circle(150px at 80% 20%);
+      transition: 0.5s ease-in-out;
+    }
+
+    .container .card:hover:before {
+      clip-path: circle(300px at 80% -20%);
+    }
+
+    .container .card:after {
+      content: 'Assist';
+      position: absolute;
+      top: 30%;
+      left: -20%;
+      font-size: 12em;
+      font-weight: italic;
+      font-style: italic;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .container .card .imgBx {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10000;
+      width: 100%;
+      height: 220px;
+      transition: 0.5s;
+    }
+
+    .container .card:hover .imgBx {
+      top: 0%;
+      transform: translateY(0%);
+    }
+
+    .container .card .imgBx img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .container .card .contentBx {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      transition: 1s;
+      z-index: 10;
+    }
+
+    .container .card:hover .contentBx {
+      height: 210px;
+    }
+
+    .container .card .contentBx h2{
+      position: relative;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+
+    .container .card .contentBx a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #fff;
+      margin-top: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 0.5s;
+      border-radius: 20px;
+    }
+
+    .container .card:hover .contentBx a {
+      opacity: 1;
+      transform: translateY(0px);
+      background-color:#28c7dc;
+      color: white;
+    }
+
+    .container2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      position: relative; 
+      font-family: 'Oswald', sans-serif;
+    }
+
+  .container2 .card2 {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .container2 .card2:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #28dc40;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+  }
+
+  .container2 .card2:hover:before {
+    clip-path: circle(300px at 80% -20%);
+  }
+
+  .container2 .card2:after {
+    content: 'Speak';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: italic;
+    font-style: italic;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .container2 .card2 .imgBx2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+  }
+
+  .container2 .card2:hover .imgBx2 {
+    top: 0%;
+    transform: translateY(0%);
+  }
+
+  .container2 .card2 .imgBx2 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .container2 .card2 .contentBx2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+  }
+
+  .container2 .card2:hover .contentBx2 {
+    height: 210px;
+  }
+
+  .container2 .card2 .contentBx2 h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+
+  .container2 .card2 .contentBx2 a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+    border-radius: 20px;
+  }
+
+  .container2 .card2:hover .contentBx2 a {
+    opacity: 1;
+    transform: translateY(0px);
+    background-color:#28dc40;
+    color: white;
+  }
+
+  .container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+  }
+
+.container3 .card3 {
+  position: relative;
+  width: 320px;
+  height: 450px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container3 .card3:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e68312;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.container3 .card3:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+
+.container3 .card3:after {
+  content: 'WebF';
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: italic;
+  font-style: italic;
+  color: rgba(255,255,255,0.4);
+}
+
+.container3 .card3 .imgBx3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.container3 .card3:hover .imgBx3 {
+  top: 0%;
+  transform: translateY(0%);
+}
+
+.container3 .card3 .imgBx3 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container3 .card3 .contentBx3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+
+.container3 .card3:hover .contentBx3 {
+  height: 210px;
+}
+
+.container3 .card3 .contentBx3 h2{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.container3 .card3 .contentBx3 a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.container3 .card3:hover .contentBx3 a {
+  opacity: 1;
+  transform: translateY(0px);
+  background-color:#e68312;
+  color: white;
+}
+
+.container4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+  }
+
+.container4 .card4 {
+  position: relative;
+  width: 320px;
+  height: 450px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container4 .card4:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #6e12e6;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.container4 .card4:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+
+.container4 .card4:after {
+  content: 'PongK';
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: italic;
+  font-style: italic;
+  color: rgba(255,255,255,0.4);
+}
+
+.container4 .card4 .imgBx4 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.container4 .card4:hover .imgBx4 {
+  top: 0%;
+  transform: translateY(0%);
+}
+
+.container4 .card4 .imgBx4 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container4 .card4 .contentBx4 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+
+.container4 .card4:hover .contentBx4 {
+  height: 210px;
+}
+
+.container4 .card4 .contentBx4 h2{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.container4 .card4 .contentBx4 a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.container4 .card4:hover .contentBx4 a {
+  opacity: 1;
+  transform: translateY(0px);
+  background-color:#6e12e6;
+  color: white;
+}
